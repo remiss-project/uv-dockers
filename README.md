@@ -83,3 +83,27 @@ Example:
 ```bash
 GET /api/graph6?name=castleon&window=1
 ```
+
+# Documentation for laiauv's "remiss-shiny" Docker Image
+This Docker image contains the visualization tool for analyzing tweets and generating graphs based on various characteristics like syntactic information, emotions, sentiment, and the probability of fake news obtained by or Random Forest.
+
+## Usage
+
+### Downloading the Image from Docker Hub
+
+To download the image from Docker Hub, execute the following command:
+
+```bash
+docker pull laiauv/remiss-shiny:v3
+```
+
+### Running the Downloaded Image
+
+Once you have downloaded the image, you can run a container using this image. For example:
+
+```bash
+docker run --rm -p 8180:8180 laiauv/remiss-shiny:v3
+```
+
+This will run the image as a container and map port 8180 of the container to port 8180 on your local machine.
+Note that laiauv is the username on Docker Hub and remiss-shiny is the image name.
