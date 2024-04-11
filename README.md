@@ -46,8 +46,40 @@ GET /api/get_data?name=castleon&window=20
 ### /api/graph1
 
 Get the JSON data to generate an emotion line graph per hour.
-
 Example:
 ```bash
 GET /api/graph1?name=castleon&start=2020-12-01&end=2021-02-28
+```
+
+### /api/graph2
+
+Get the JSON data to generate an average emotion bar graph.
+Example:
+```bash
+GET /api/graph2?name=castleon&window=30
+```
+### /api/graph3
+Get the JSON data to generate a graph of top profiles.
+Example:
+```bash
+GET /api/graph3?name=castleon
+```
+### /api/graph4
+Get the JSON data to generate a graph of top hashtags.
+Example:
+```bash
+GET /api/graph4?name=castleon
+```
+### /api/graph5
+Get the JSON data to generate
+
+Example:
+```bash
+GET /api/graph5?name=castleon
+```
+### /api/graph6
+Get the JSON data to generate
+Example:
+```bash
+GET /api/graph6?name=castleon&window=1
 ```
