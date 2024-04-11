@@ -18,7 +18,7 @@ docker pull laiauv/remiss-api:v3
 Once you have downloaded the image, you can run a container using this image. For example:
 
 ```bash
-docker run --rm -p 5005:5005 laiauv/remiss-api
+docker run --rm -p 5005:5005 laiauv/remiss-api:v3
 ```
 
 This will run the image as a container and map port 5005 of the container to port 5005 on your local machine.
