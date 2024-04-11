@@ -10,7 +10,7 @@ This Docker image contains an API for accessing and analyzing datasets stored in
 To download the image from Docker Hub, execute the following command:
 
 ```bash
-docker pull laiauv/remiss-api
+docker pull laiauv/remiss-api:v3
 ```
 
 ### Running the Downloaded Image
