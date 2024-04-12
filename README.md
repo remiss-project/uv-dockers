@@ -24,6 +24,11 @@ docker run --rm -p 5005:5005 laiauv/remiss-api:v3
 This will run the image as a container and map port 5005 of the container to port 5005 on your local machine.
 Note that laiauv is the username on Docker Hub and remiss-api is the image name.
 
+You can modify the MONGO_URL environment variable when running the Docker container using the -e option followed by the name of the environment variable and its new value. Here's the command to do it:
+```bash
+docker run --rm -p 5005:5005 -e MONGO_URL="new_mongo_url_value" laiauv/remiss-api:v3
+```
+
 ## API Endpoints
 
 The API offers several endpoints for accessing data and generating visualizations. All endpoints accept the following arguments:
