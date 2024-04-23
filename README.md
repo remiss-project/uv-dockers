@@ -36,7 +36,7 @@ docker run --rm -p 5005:5006 -e MONGO_URL="mongodb://127.0.0.1:27017/remiss?dire
 
 The API offers several endpoints for accessing data and generating visualizations. All endpoints accept the following arguments:
 
-* name (string): Filters the data by dataset name.
+* name (string): Filters the data by dataset name. [catalunya, madrid, andalucia, castleon, violacions, bcn15, bcn19, ajudes]
 * window (integer): Specifies the time window for analyzing the data in a defined period.
 * start (string): Defines the start of a specific date range.
 * end (string): Indicates the end of the date range.
