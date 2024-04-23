@@ -2,6 +2,8 @@
 # Documentation for laiauv's "remiss-api" Docker Image
 
 This Docker image contains an API for accessing and analyzing datasets stored in the Mongo database. The API provides various endpoints for retrieving data and generating visualizations using Plotly with R.
+* Dashboard --> http://srvinv02.esade.es:8180/
+* API --> http://srvinv02.esade.es:5005/
 
 ## Usage
 
@@ -28,7 +30,6 @@ You can modify the MONGO_URL environment variable when running the Docker contai
 ```bash
 docker run --rm -p 5005:5006 -e MONGO_URL="new_mongo_url_value" laiauv/remiss-api:v3
 docker run --rm -p 5005:5006 -e MONGO_URL="mongodb://127.0.0.1:27017/remiss?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.0.0" laiauv/remiss-api:v3
-
 ```
 
 ## API Endpoints
@@ -101,7 +102,7 @@ This Docker image contains the visualization tool for analyzing tweets and gener
 To download the image from Docker Hub, execute the following command:
 
 ```bash
-docker pull laiauv/remiss-shiny:v3
+docker pull laiauv/remiss-shiny:latest
 ```
 
 ### Running the Downloaded Image
@@ -109,7 +110,8 @@ docker pull laiauv/remiss-shiny:v3
 Once you have downloaded the image, you can run a container using this image. For example:
 
 ```bash
-docker run --rm -p 8180:8180 laiauv/remiss-shiny:v3
+docker run --rm -p 8180:8180 laiauv/remiss-shiny:latest
+sudo docker run --rm -d --name remiss-uv-dashboard -p 8180:8180 --link remiss-uv-api:remiss-uv-api laiauv/remiss-shiny:latest
 ```
 
 This will run the image as a container and map port 8180 of the container to port 8180 on your local machine.
