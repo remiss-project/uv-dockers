@@ -22,7 +22,7 @@ docker pull laiauv/remiss-api:latest
 Once you have downloaded the image, you can run a container using this image. For example:
 
 ```bash
-docker run --rm -p 5005:5006 laiauv/remiss-api:latest
+docker run --rm -p 5005:5005 laiauv/remiss-api:latest
 ```
 
 This will run the image as a container and map port 5006 of the container to port 5005 on your local machine.
@@ -30,8 +30,8 @@ Note that laiauv is the username on Docker Hub and remiss-api is the image name.
 
 You can modify the MONGO_URL environment variable when running the Docker container using the -e option followed by the name of the environment variable and its new value. By default is ENV MONGO_URL="mongodb://localhost/remiss".
 ```bash
-docker run --rm -p 5005:5006 -e MONGO_URL="new_mongo_url_value" laiauv/remiss-api:latest
-docker run --rm -p 5005:5006 -e MONGO_URL="mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.0.0" laiauv/remiss-api:latest
+docker run --rm -p 5005:5005 -e MONGO_URL="new_mongo_url_value" laiauv/remiss-api:latest
+docker run --rm -p 5005:5005 -e MONGO_URL="mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.0.0" laiauv/remiss-api:latest
 ```
 
 ## API Endpoints
