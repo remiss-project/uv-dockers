@@ -1,6 +1,7 @@
 # uv-dockers
 * Dashboard --> http://srvinv02.esade.es:8180/
 * API --> http://srvinv02.esade.es:5005/
+* METRICS --> http://srvinv02.esade.es:5006/
   
 # Documentation for laiauv's "remiss-api" Docker Image
 
@@ -118,3 +119,19 @@ sudo docker run --rm -d --name remiss-uv-dashboard -p 8180:8180 --link remiss-uv
 
 This will run the image as a container and map port 8180 of the container to port 8180 on your local machine.
 Note that laiauv is the username on Docker Hub and remiss-shiny is the image name.
+
+
+# Documentation for laiauv's "remiss-metrics" Docker Image
+The application can process CSV files containing text data and perform detailed analysis on that data
+
+## API Endpoint
+
+### POST /process
+
+This endpoint processes a CSV file containing text data and performs various metrics and analyses on that data, such as emotion analysis, linguistic feature extraction, authenticity prediction, etc. The required parameters for this endpoint include:
+    * file_name: The name of the CSV file containing the text data to be processed.
+    * db_name: The name of the database where the analysis results will be saved.
+    * col_name: The name of the collection (or table) within the database where the results will be stored.
+    * text_label: The text label to be used for analysis. This label identifies the column in the CSV file that contains the texts to be analyzed.
+
+These parameters are necessary for the endpoint to perform the appropriate processing and analysis of the text data provided in the CSV file.
