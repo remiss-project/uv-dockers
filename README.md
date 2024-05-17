@@ -26,7 +26,7 @@ Once you have downloaded the image, you can run a container using this image. Fo
 docker run --rm -p 5005:5005 laiauv/remiss-api:latest
 ```
 
-This will run the image as a container and map port 5006 of the container to port 5005 on your local machine.
+This will run the image as a container and map port 5005 of the container to port 5005 on your local machine.
 Note that laiauv is the username on Docker Hub and remiss-api is the image name.
 
 You can modify the MONGO_URL environment variable when running the Docker container using the -e option followed by the name of the environment variable and its new value. By default is ENV MONGO_URL="mongodb://localhost/remiss".
@@ -123,6 +123,24 @@ Note that laiauv is the username on Docker Hub and remiss-shiny is the image nam
 
 # Documentation for laiauv's "remiss-metrics" Docker Image
 The application can process CSV files containing text data and perform detailed analysis on that data
+
+## Usage
+
+### Downloading the Image from Docker Hub
+
+To download the image from Docker Hub, execute the following command:
+
+```bash
+docker pull laiauv/remiss-metrics:latest
+```
+
+### Running the Downloaded Image
+
+Once you have downloaded the image, you can run a container using this image. For example:
+
+```bash
+docker run --rm -p 5006:5006 laiauv/remiss-metrics:latest
+```
 
 ## API Endpoint
 
