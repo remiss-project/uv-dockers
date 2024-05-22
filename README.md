@@ -155,6 +155,6 @@ This endpoint processes a CSV file containing text data and performs various met
 These parameters are necessary for the endpoint to perform the appropriate processing and analysis of the text data provided in the CSV file.
 
 ```bash
-curl -X POST "http://127.0.0.1:5006/process?file_name=/home/administrador/Descargas/prueba.csv&db_name=test&col_name=textual&text_label=text"
+curl -X POST "http://127.0.0.1:5006/process?file_name=prueba.csv&db_name=test&col_name=textual&text_label=text"
 
 ```
