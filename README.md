@@ -139,7 +139,7 @@ docker pull laiauv/remiss-metrics:latest
 Once you have downloaded the image, you can run a container using this image. For example:
 
 ```bash
-docker run -it -p 5006:5006 -e mongo_url="mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.0.0" -v /home/daniel.garcia1.ext/metrics:/app/data laiauv/remiss-metrics:latest 
+curl -X POST "http://127.0.0.1:5006/process?file_name=prueba.csv&db_name=test&col_name=textual&text_label=text"
 ```
 
 ## API Endpoint
