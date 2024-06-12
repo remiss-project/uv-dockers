@@ -39,7 +39,7 @@ docker run --rm -p 5005:5005 -e MONGO_URL="mongodb://127.0.0.1:27017/?directConn
 
 The API offers several endpoints for accessing data and generating visualizations. All endpoints accept the following arguments:
 
-* name (string): Filters the data by dataset name. [catalunya, madrid, andalucia, castleon, violacions, bcn15, bcn19, ajudes]
+* name (string): Filters the data by dataset name. [ Andalucia_2022 , Barcelona_2019 , Castilla_Leon_2022, Generales_2019, Generalitat_2021, MENA_Agressions, MENA_Ajudes, Madrid_2021, Openarms ]
 * window (integer): Specifies the time window for analyzing the data in a defined period.
 * start (string): Defines the start of a specific date range.
 * end (string): Indicates the end of the date range.
@@ -51,7 +51,7 @@ The format for start and end arguments is YYYY-MM-DD.
 Retrieves the indicated information from the database.
 Example:
 ```bash
-GET /api/get_data?name=castleon&window=20
+GET /api/get_data?name=Castilla_Leon_2022&window=20
 ```
 
 ### /api/graph1
@@ -59,7 +59,7 @@ GET /api/get_data?name=castleon&window=20
 Get the JSON data to generate an emotion line graph per hour.
 Example:
 ```bash
-GET /api/graph1?name=castleon&start=2020-12-01&end=2021-02-28
+GET /api/graph1?name=Castilla_Leon_2022&start=2020-12-01&end=2021-02-28
 ```
 
 ### /api/graph2
@@ -67,32 +67,32 @@ GET /api/graph1?name=castleon&start=2020-12-01&end=2021-02-28
 Get the JSON data to generate an average emotion bar graph.
 Example:
 ```bash
-GET /api/graph2?name=castleon&window=30
+GET /api/graph2?name=Castilla_Leon_2022&window=30
 ```
 ### /api/graph3
 Get the JSON data to generate a graph of top profiles.
 Example:
 ```bash
-GET /api/graph3?name=castleon
+GET /api/graph3?name=Castilla_Leon_2022
 ```
 ### /api/graph4
 Get the JSON data to generate a graph of top hashtags.
 Example:
 ```bash
-GET /api/graph4?name=castleon
+GET /api/graph4?name=Castilla_Leon_2022
 ```
 ### /api/graph5
 Get the JSON data to generate
 
 Example:
 ```bash
-GET /api/graph5?name=castleon
+GET /api/graph5?name=Castilla_Leon_2022
 ```
 ### /api/graph6
 Get the JSON data to generate
 Example:
 ```bash
-GET /api/graph6?name=castleon&window=1
+GET /api/graph6?name=Castilla_Leon_2022&window=1
 ```
 
 # Documentation for laiauv's "remiss-shiny" Docker Image
