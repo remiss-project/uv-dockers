@@ -160,4 +160,4 @@ curl -X POST "http://127.0.0.1:5006/process?file_name=prueba.csv&db_name=test&co
 ```
 
 ## Authors
-- [LAIA-UV](https://github.com/Laia-uv)
+- [LAIA-UV](https://laia.uv.es/)
