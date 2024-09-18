@@ -158,3 +158,8 @@ These parameters are necessary for the endpoint to perform the appropriate proce
 curl -X POST "http://127.0.0.1:5006/process?file_name=prueba.csv&db_name=test&col_name=textual&text_label=text"
 
 ```
+
+## Authors
+- [Daniel García]
+- [Elena Álvarez]
+- [Sandra Paniagua]
