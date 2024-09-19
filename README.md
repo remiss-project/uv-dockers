@@ -1,4 +1,5 @@
 # uv-dockers
+The urls are only available by connecting to Esade VPN 
 * Dashboard --> http://srvinv02.esade.es:8180/
 * API --> http://srvinv02.esade.es:5005/
 * METRICS --> http://srvinv02.esade.es:5006/
